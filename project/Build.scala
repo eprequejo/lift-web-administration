@@ -31,7 +31,8 @@ object AdminBuild extends Build {
       Dependencies.joda_time,
       Dependencies.joda_convert,
       Dependencies.bonecp,
-      Dependencies.postgres,
+      //Dependencies.postgres,
+      Dependencies.mysql,
       Dependencies.cglib_nodep,
       Dependencies.logback
     )
@@ -75,15 +76,16 @@ object AdminBuild extends Build {
 
   object Dependencies {
 
-    val joda_time     = "joda-time"           % "joda-time"       % "2.7"
-    val joda_convert  = "org.joda"            % "joda-convert"    % "1.7"
-    val commons_lang3 = "org.apache.commons"  % "commons-lang3"   % "3.3.2"
-    val logback       = "ch.qos.logback"      % "logback-classic" % "1.1.2"
-    val postgres      = "postgresql"          % "postgresql"      % "9.0-801.jdbc4"
-    val bonecp        = "com.jolbox"          % "bonecp"          % "0.7.1.RELEASE"
-    val cglib_nodep   = "cglib"               % "cglib-nodep"     % "2.2.2"
-    val scalaTest     = "org.scalatest"       % "scalatest_2.10"  % "2.0"           % "test"
-    val scalazCore    = "org.scalaz"          %% "scalaz-core"    % "7.1.0"
+    val joda_time     = "joda-time"           % "joda-time"             % "2.7"
+    val joda_convert  = "org.joda"            % "joda-convert"          % "1.7"
+    val commons_lang3 = "org.apache.commons"  % "commons-lang3"         % "3.3.2"
+    val logback       = "ch.qos.logback"      % "logback-classic"       % "1.1.2"
+    val postgres      = "postgresql"          % "postgresql"            % "9.0-801.jdbc4"
+    val mysql         = "mysql"               % "mysql-connector-java"  % "5.1.10"
+    val bonecp        = "com.jolbox"          % "bonecp"                % "0.7.1.RELEASE"
+    val cglib_nodep   = "cglib"               % "cglib-nodep"           % "2.2.2"
+    val scalaTest     = "org.scalatest"       % "scalatest_2.10"        % "2.0"           % "test"
+    val scalazCore    = "org.scalaz"          %% "scalaz-core"          % "7.1.0"
 
   }
 

@@ -9,7 +9,7 @@ import scalaz.Scalaz._
 object DataService {
 
   //postgress connection
-  def startDatabaseSession[T <: DataSource](ds: T) {
+  /*def init[T <: DataSource](ds: T) {
     source = Option(ds)
     SessionFactory.concreteFactory = Some(() =>
       Session.create(
@@ -17,10 +17,10 @@ object DataService {
         new PostgreSqlAdapter
       )
     )
-  }
+  }*/
 
-  //mysql connection for production
-  /*def startDatabaseSession[T <: DataSource](ds: T) {
+  //mysql connection
+  def init[T <: DataSource](ds: T) {
     source = Option(ds)
     SessionFactory.concreteFactory = Some(() =>
       Session.create(
@@ -28,7 +28,7 @@ object DataService {
         new MySQLAdapter
       )
     )
-  }*/
+  }
 
   def shutdown(): Unit = {
     source map (_.shutdown())
