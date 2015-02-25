@@ -40,9 +40,10 @@ CREATE TABLE sparkle.colours
   name VARCHAR(15)
 );
 
-CREATE TABLE sparkle.products
+CREATE TABLE sparkle.swatch_products
 (
-  ref_num character varying(30) NOT NULL PRIMARY KEY,
+  id integer NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  ref_num character varying(30) NOT NULL,
   id_subfamily integer NOT NULL REFERENCES sparkle.subfamilies(id),
   name character varying(70),
   description character varying(1000),
