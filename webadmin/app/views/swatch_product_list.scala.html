@@ -1,0 +1,12 @@
+@(products: Seq[com.sp.model.Schema.SwatchProduct])
+
+<h3>Swatch products</h3>
+<ul>
+  @for(p <- products) {
+    <li>@p.name</li>
+  }
+</ul>
+
+
+
+
